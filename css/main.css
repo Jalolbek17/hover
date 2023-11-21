@@ -1,0 +1,120 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* MAIN */
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/background.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 2.5rem;
+}
+
+.container {
+  position: relative;
+  width: 490px;
+  height: 490px;
+  border-radius: 6px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 11px 13px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 11px 13px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 570px) {
+  .container {
+    height: 0;
+    padding-bottom: 100%;
+  }
+}
+
+.container:hover .cover .image:last-child {
+  -webkit-transform: rotateY(-50deg);
+          transform: rotateY(-50deg);
+  -webkit-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+}
+
+.container:hover .actions {
+  -webkit-transition: z-index .2s .2s;
+  transition: z-index .2s .2s;
+  z-index: 10;
+}
+
+.container .actions {
+  position: relative;
+  float: right;
+  border-radius: 6px;
+  z-index: 0;
+}
+
+.container .actions img {
+  display: block;
+  cursor: pointer;
+  opacity: .65;
+  width: 30px;
+  margin: 1.2rem 1.1rem 2.2rem 0;
+  -webkit-transition: opacity .1s;
+  transition: opacity .1s;
+}
+
+@media screen and (max-width: 570px) {
+  .container .actions img {
+    width: 20px;
+    margin: .9rem .8rem 1.6rem 0;
+  }
+}
+
+.container .actions img:hover {
+  opacity: 1;
+}
+
+.container .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .cover .image {
+  background: url("../img/kanye.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container .cover .image:first-child {
+  border-radius: 6px 0 0 6px;
+  background-position: 12% 0;
+}
+
+.container .cover .image:last-child {
+  border-radius: 0 6px 6px 0;
+  background-position: 90% 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+/*# sourceMappingURL=main.css.map */
